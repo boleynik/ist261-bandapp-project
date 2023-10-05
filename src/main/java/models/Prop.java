@@ -4,9 +4,16 @@ public class Prop {
     private String propType;
     private int propID;
 
-    public Prop(String propType, int propID) {
+    private int memberID;
+
+    public Prop(){
+
+    }
+
+    public Prop(String propType, int propID, int memberID) {
         this.propType = propType;
         this.propID = propID;
+        this.memberID = memberID;
     }
 
     public String getPropType() {
@@ -31,5 +38,13 @@ public class Prop {
                 "propType='" + propType + '\'' +
                 ", propID=" + propID +
                 '}';
+    }
+
+    public int getMemberID() {
+        return memberID;
+    }
+
+    public void setMemberID(int memberID) {
+        this.memberID = memberID;
     }
 }

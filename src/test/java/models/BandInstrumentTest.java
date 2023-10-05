@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BandInstrumentTest {
-BandInstrument inst = new BandInstrument("Mellophone", "Conn", 17);
+BandInstrument inst = new BandInstrument("Mellophone", "Conn", 17, memberID);
     @Test
     void getType() {
         assertEquals("Mellophone", inst.getType());

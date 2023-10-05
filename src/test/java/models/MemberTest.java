@@ -10,13 +10,13 @@ class MemberTest {
     @org.junit.jupiter.api.Test
     void getStudentID() {
 
-        assertEquals(001, mem1.getStudentID());
+        assertEquals(001, mem1.getMemberID());
     }
 
     @org.junit.jupiter.api.Test
     void setStudentID() {
-        mem1.setStudentID(002);
-        assertEquals(002, mem1.getStudentID());
+        mem1.setMemberID(002);
+        assertEquals(002, mem1.getMemberID());
     }
 
     @org.junit.jupiter.api.Test

@@ -4,11 +4,17 @@ public class BandInstrument {
     private String instrumentType;
     private String instrumentManufacturer;
     private int instrumentSerialNumber;
+    private int memberID;
 
-    public BandInstrument(String instrumentType, String instrumentManufacturer, int instrumentSerialNumber) {
+    public BandInstrument(){
+
+    }
+
+    public BandInstrument(String instrumentType, String instrumentManufacturer, int instrumentSerialNumber, int memberID) {
         this.instrumentType = instrumentType;
         this.instrumentManufacturer = instrumentManufacturer;
         this.instrumentSerialNumber = instrumentSerialNumber;
+        this.memberID = memberID;
     }
 
     public String getType() {
@@ -42,5 +48,13 @@ public class BandInstrument {
                 ", instrumentManufacturer='" + instrumentManufacturer + '\'' +
                 ", instrumentSerialNumber=" + instrumentSerialNumber +
                 '}';
+    }
+
+    public int getMemberID() {
+        return memberID;
+    }
+
+    public void setMemberID(int memberID) {
+        this.memberID = memberID;
     }
 }

@@ -1,7 +1,7 @@
 package models;
 
 public class Member {
-    protected int studentID;
+    protected int memberID;
     protected String firstName;
     protected String lastName;
     protected int yearInBand;
@@ -11,9 +11,9 @@ public class Member {
     protected double musicScore;
     protected Uniform uniform;
 
-    public Member(int studentID, String firstName, String lastName, int yearInBand,
-                  String rankAndFile, boolean isSectionLeader,Uniform uniform, double uniformScore, double musicScore) {
-        this.studentID = studentID;
+    public Member(int memberID, String firstName, String lastName, int yearInBand,
+                  String rankAndFile, boolean isSectionLeader, Uniform uniform, double uniformScore, double musicScore) {
+        this.memberID = memberID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.yearInBand = yearInBand;
@@ -24,12 +24,12 @@ public class Member {
         this.uniform = uniform;
     }
 
-    public int getStudentID() {
-        return studentID;
+    public int getMemberID() {
+        return memberID;
     }
 
-    public void setStudentID(int studentID) {
-        this.studentID = studentID;
+    public void setMemberID(int memberID) {
+        this.memberID = memberID;
     }
 
     public String getFirstName() {
@@ -99,7 +99,7 @@ public class Member {
     @Override
     public String toString() {
         return "models.Member{" +
-                "studentID=" + studentID +
+                "memberID=" + memberID +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", yearInBand=" + yearInBand +

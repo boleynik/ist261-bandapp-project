@@ -20,7 +20,7 @@ public class Bandfront extends Member {
     @Override
     public String toString() {
         return "models.Member{" +
-                "studentID=" + studentID +
+                "memberID=" + memberID +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", yearInBand=" + yearInBand +
