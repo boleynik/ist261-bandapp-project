@@ -54,7 +54,7 @@ public class BandInstrument {
         return memberID;
     }
 
-    public void setMemberID(int memberID) {
+    public static void setMemberID(int memberID) {
         this.memberID = memberID;
     }
 }

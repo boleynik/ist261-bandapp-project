@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 
 public class HomeController {
-    public ArrayList<Mem>
+
 
     // TODO: 10/5/23 make home ui and initialize
 

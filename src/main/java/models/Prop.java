@@ -7,7 +7,6 @@ public class Prop {
     private int memberID;
 
     public Prop(){
-
     }
 
     public Prop(String propType, int propID, int memberID) {
