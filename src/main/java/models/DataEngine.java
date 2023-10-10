@@ -80,6 +80,10 @@ public class DataEngine {
             int q = 1;
             while (input.hasNextLine())
             {
+                /* TODO: 10/9/23 Make member data and create the if
+                    statement below to filter instrumentalists and bandfront */
+
+                if ()
                 BandInstrument newInstrument = new BandInstrument();
                 String[] record = input.nextLine().split(",");
                 BandInstrument.setMemberID(q);

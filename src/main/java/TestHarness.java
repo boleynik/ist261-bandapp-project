@@ -1,4 +1,3 @@
-import models.Director;
 import models.Uniform;
 
 public class TestHarness {
