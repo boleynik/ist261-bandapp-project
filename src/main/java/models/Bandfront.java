@@ -1,19 +1,22 @@
 package models;
 
 public class Bandfront extends Member {
-    private Prop prop;
+    private int prop;
 
     public Bandfront(int studentID, String firstName, String lastName, int yearInBand, String rankAndFile,
-                     boolean isSectionLeader, Uniform uniform, double uniformScore, double musicScore, Prop prop) {
+                     boolean isSectionLeader, int uniform, double uniformScore, double musicScore, int prop) {
         super(studentID, firstName, lastName, yearInBand, rankAndFile, isSectionLeader, uniform, uniformScore, musicScore);
         this.prop = prop;
     }
+    public Bandfront(){
 
-    public Prop getProp() {
+    }
+
+    public int getProp() {
         return prop;
     }
 
-    public void setProp(Prop prop) {
+    public void setProp(int prop) {
         this.prop = prop;
     }
 

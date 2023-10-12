@@ -1,20 +1,26 @@
 package models;
 
 public class Instrumentalist extends Member{
-    private BandInstrument instrument;
+    private int instrument;
+
+
 
 
     public Instrumentalist(int studentID, String firstName, String lastName, int yearInBand, String rankAndFile,
-                           boolean isSectionLeader, Uniform uniform, double uniformScore, double musicScore, BandInstrument instrument) {
+                           boolean isSectionLeader, int uniform, double uniformScore, double musicScore, int instrument) {
         super(studentID, firstName, lastName, yearInBand, rankAndFile, isSectionLeader, uniform, uniformScore, musicScore);
         this.instrument = instrument;
+    }
+
+    public Instrumentalist() {
+
     }
 
     public String getInstrument() {
         return String.valueOf(instrument);
     }
 
-    public void setInstrument(BandInstrument instrument) {
+    public void setInstrument(int instrument) {
         this.instrument = instrument;
     }
 

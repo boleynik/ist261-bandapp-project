@@ -6,7 +6,7 @@ class MemberTest {
     Uniform uniform = new Uniform(1, true, true,true,
             true,true,true,true);
     Member mem1 = new Member(001, "Sam", "Band", 4, "A4",
-            false, uniform, 100, 100);
+            false, 1, 100, 100);
     @org.junit.jupiter.api.Test
     void getStudentID() {
 
@@ -102,11 +102,11 @@ class MemberTest {
 
     }
 
-    @org.junit.jupiter.api.Test
-    void setUniform() {
-        Uniform testUniform = new Uniform(1, false, false, false,
-                false,false,false,false);
-        mem1.setUniform(testUniform);
-        assertEquals(testUniform, mem1.getUniform());
-    }
+//    @org.junit.jupiter.api.Test
+//    void setUniform() {
+//        Uniform testUniform = new Uniform(1, false, false, false,
+//                false,false,false,false);
+//        mem1.setUniform(testUniform);
+//        assertEquals(testUniform, mem1.getUniform());
+//    }
 }

@@ -9,10 +9,10 @@ public class Member {
     protected boolean isSectionLeader;
     protected double uniformScore;
     protected double musicScore;
-    protected Uniform uniform;
+    protected int uniform;
 
     public Member(int memberID, String firstName, String lastName, int yearInBand,
-                  String rankAndFile, boolean isSectionLeader, Uniform uniform, double uniformScore, double musicScore) {
+                  String rankAndFile, boolean isSectionLeader, int uniform, double uniformScore, double musicScore) {
         this.memberID = memberID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,6 +22,9 @@ public class Member {
         this.uniformScore = uniformScore;
         this.musicScore = musicScore;
         this.uniform = uniform;
+    }
+
+    public Member() {
     }
 
     public int getMemberID() {
@@ -88,11 +91,11 @@ public class Member {
         this.musicScore = musicScore;
     }
 
-    public Uniform getUniform() {
+    public int getUniform() {
         return uniform;
     }
 
-    public void setUniform(Uniform uniform) {
+    public void setUniform(int uniformID) {
         this.uniform = uniform;
     }
 

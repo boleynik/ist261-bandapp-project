@@ -10,6 +10,10 @@ public class Uniform {
     private boolean shoesdoesPass;
     private boolean groomingdoesPass;
 
+    public Uniform(){
+
+    }
+
     public Uniform(int memberID, boolean hatdoesPass, boolean jacketdoesPass, boolean glovesdoesPass, boolean pantsdoesPass,
                    boolean spatsdoesPass, boolean shoesdoesPass, boolean groomingdoesPass) {
         this.memberID = memberID;
