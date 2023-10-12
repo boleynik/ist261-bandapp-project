@@ -1,6 +1,7 @@
 package models;
 
 public class Uniform {
+    private int memberID;
     private boolean hatdoesPass;
     private boolean jacketdoesPass;
     private boolean glovesdoesPass;
@@ -9,8 +10,9 @@ public class Uniform {
     private boolean shoesdoesPass;
     private boolean groomingdoesPass;
 
-    public Uniform(boolean hatdoesPass, boolean jacketdoesPass, boolean glovesdoesPass, boolean pantsdoesPass,
+    public Uniform(int memberID, boolean hatdoesPass, boolean jacketdoesPass, boolean glovesdoesPass, boolean pantsdoesPass,
                    boolean spatsdoesPass, boolean shoesdoesPass, boolean groomingdoesPass) {
+        this.memberID = memberID;
         this.hatdoesPass = hatdoesPass;
         this.jacketdoesPass = jacketdoesPass;
         this.glovesdoesPass = glovesdoesPass;
@@ -87,6 +89,14 @@ public class Uniform {
                 ", shoesdoesPass=" + shoesdoesPass +
                 ", groomingdoesPass=" + groomingdoesPass +
                 '}';
+    }
+
+    public int getMemberID() {
+        return memberID;
+    }
+
+    public void setMemberID(int memberID) {
+        this.memberID = memberID;
     }
 }
 

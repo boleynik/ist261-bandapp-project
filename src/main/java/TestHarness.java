@@ -22,7 +22,7 @@ public class TestHarness {
     }
     public void testUniform(){
         System.out.println("Testing the models.Uniform class: ");
-        Uniform uniform1 = new Uniform(true, true, true,
+        Uniform uniform1 = new Uniform(memberID, true, true, true,
                 true, true,true,true);
         if (uniform1 != null){
             System.out.println(uniform1.isHatdoesPass());
