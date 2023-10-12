@@ -10,7 +10,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/main/data/member.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/main/data/prop.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/main/data/uniform.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
