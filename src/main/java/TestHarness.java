@@ -5,21 +5,6 @@ public class TestHarness {
     public TestHarness(){
 
     }
-    public void testDirector(){
-        System.out.println("Testing the models.Director class:");
-        Director director1 = new Director("Jack", "Black");
-        if (director1 != null) {
-            System.out.println(director1.getFirstName());
-            System.out.println(director1.getLastName());
-            System.out.println();
-        }
-        else{
-            System.out.println("There was an error creating the director.");
-        }
-        director1.setFirstName("Joe");
-        director1.setLastName("Band");
-        System.out.println(director1.toString());
-    }
     public void testUniform(){
         System.out.println("Testing the models.Uniform class: ");
         Uniform uniform1 = new Uniform(1, true, true, true,

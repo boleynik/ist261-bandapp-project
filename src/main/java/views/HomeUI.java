@@ -1,10 +1,64 @@
 package views;
 
-import javax.swing.*;
+import controllers.HomeController;
+import models.Member;
 
-public class HomeUI {
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
+
+
+public class HomeUI extends JFrame{
     private JPanel homePanel;
     private JTable homeTable;
     private JButton addButton;
     private JButton exitButton;
+
+    private HomeUI callingForm;
+
+    private HomeController homeController;
+
+    public HomeUI(HomeController controller){
+        callingForm = this;
+        this.homeController = controller;
+
+        loadTable(controller.members);
+
+        this.setContentPane(homePanel);
+
+    }
+
+
+
+
+
+    public void loadTable(ArrayList<Member> members)
+    {
+        String headers[] = {"ID", "First Name", "Last Name", "Year in Band"};
+        DefaultTableModel model = new DefaultTableModel();
+        model.setColumnIdentifiers(headers);
+        for(Member member : members)
+        {
+            model.addRow(new Object[] {member.getMemberID(), member.getFirstName(), member.getLastName(), member.getYearInBand()});
+        }
+        homeTable.setModel(model);
+    }
+
+
+    public JPanel getHomePanel() {
+        return homePanel;
+    }
+
+    public JTable getHomeTable() {
+        return homeTable;
+    }
+
+    public JButton getAddButton() {
+        return addButton;
+    }
+
+    public JButton getExitButton() {
+        return exitButton;
+    }
+
 }
