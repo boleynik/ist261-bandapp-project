@@ -24,10 +24,10 @@ public class HomeController {
         homeUI.setSize(500, 500);
         homeUI.setVisible(true);
 
-        homeUI.getExitButton().addActionListener(e -> {
-            System.exit(0);
-        });
+        homeUI.getExitButton().addActionListener(e -> System.exit(0));
+
     }
+
 
 
 

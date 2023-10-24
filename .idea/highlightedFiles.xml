@@ -7,6 +7,8 @@
       <node color="2" path="$PROJECT_DIR$/src/main/java/models" />
       <node color="4" path="$PROJECT_DIR$/src/main/java/TestHarness.java" />
       <node color="3" path="$PROJECT_DIR$/src/main/java/views" />
+      <node color="5" path="$PROJECT_DIR$/src/main/java/views/AddMember.form" />
+      <node color="5" path="$PROJECT_DIR$/src/main/java/views/AddMember.java" />
     </files>
     <colors>
       <color id="1" value="#4f060d" name="Color 1" enabled="true" />

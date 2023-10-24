@@ -61,4 +61,20 @@ public class HomeUI extends JFrame{
         return exitButton;
     }
 
+    public void editRecord(){
+        int selectedRow = homeTable.getSelectedRow();
+
+        String firstName;
+        String lastName;
+        int yearInBand;
+
+        firstName = (String)homeTable.getValueAt(selectedRow, 0);
+        lastName = (String)homeTable.getValueAt(selectedRow, 1);
+        yearInBand = (Integer)homeTable.getValueAt(selectedRow, 2);
+
+        AddMember addui = new AddMember(firstName, lastName, yearInBand);
+        addui.setVisible(true);
+    }
+
+
 }

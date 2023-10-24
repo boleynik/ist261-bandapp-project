@@ -15,12 +15,10 @@ public class DataEngine {
             //since the data file has headers in the first line we need to skip reading in the first line
             input.nextLine();
             //now start looping thru and loading the models
-            int q = 1;
             while (input.hasNextLine())
             {
                 BandInstrument newInstrument = new BandInstrument();
                 String[] record = input.nextLine().split(",");
-                q++;
                 for(int x = 0; x < record.length-1; x++)
                 {
 
@@ -48,13 +46,11 @@ public class DataEngine {
             //since the data file has headers in the first line we need to skip reading in the first line
             input.nextLine();
             //now start looping thru and loading the models
-            int q = 1;
             while (input.hasNextLine())
             {
                 Prop newProp = new Prop();
                 String[] record = input.nextLine().split(",");
 
-                q++;
                 for(int x = 0; x < record.length-1; x++)
                 {
                     newProp.setPropType(record[0]);
@@ -79,12 +75,10 @@ public class DataEngine {
             //since the data file has headers in the first line we need to skip reading in the first line
             input.nextLine();
             //now start looping thru and loading the models
-            int q = 1;
             while (input.hasNextLine())
             {
                 Uniform newUniform = new Uniform();
                 String[] record = input.nextLine().split(",");
-                q++;
                 for(int x = 0; x < record.length-1; x++)
                 {
                     newUniform.setMemberID(Integer.parseInt(record[0]));
@@ -114,13 +108,11 @@ public class DataEngine {
             //since the data file has headers in the first line we need to skip reading in the first line
             input.nextLine();
             //now start looping thru and loading the models
-            int q = 1;
             while (input.hasNextLine()) {
 
 //                BandInstrument newInstrument = new BandInstrument();
                 String[] record = input.nextLine().split(",");
 //                BandInstrument.setMemberID(q);
-                q++;
                 if (Objects.equals(record[0], "Instrumentalist")) {
                     Instrumentalist newInstrumentalist = new Instrumentalist();
                     for (int x = 0; x < record.length - 1; x++) {
