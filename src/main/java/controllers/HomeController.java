@@ -12,7 +12,7 @@ public class HomeController {
 
     public ArrayList<Member> members;
 
-    public HomeController(ArrayList<Member> membersfromMain){
+    public HomeController(ArrayList<Member> membersfromMain) {
         members = membersfromMain;
 
         homeUI = new HomeUI(this);
@@ -25,13 +25,8 @@ public class HomeController {
         homeUI.setVisible(true);
 
         homeUI.getExitButton().addActionListener(e -> System.exit(0));
+        homeUI.getAddButton().addActionListener(e -> homeUI.editRecord());
+
 
     }
-
-
-
-
-
-
-
 }

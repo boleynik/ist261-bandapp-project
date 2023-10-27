@@ -5,6 +5,8 @@ import models.Member;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 
@@ -25,6 +27,24 @@ public class HomeUI extends JFrame{
         loadTable(controller.members);
 
         this.setContentPane(homePanel);
+
+        addButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                AddMember addUI = new AddMember(homeController, callingForm);
+                addUI.setVisible(true);
+            }
+        });
+
+        homeTable.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                editRecord();
+
+            }
+        });
+
 
     }
 
@@ -67,14 +87,17 @@ public class HomeUI extends JFrame{
         String firstName;
         String lastName;
         int yearInBand;
+        int memberid;
 
-        firstName = (String)homeTable.getValueAt(selectedRow, 0);
-        lastName = (String)homeTable.getValueAt(selectedRow, 1);
-        yearInBand = (Integer)homeTable.getValueAt(selectedRow, 2);
+        memberid = (Integer)homeTable.getValueAt(selectedRow, 0);
+        firstName = (String)homeTable.getValueAt(selectedRow, 1);
+        lastName = (String)homeTable.getValueAt(selectedRow, 2);
+        yearInBand = (Integer)homeTable.getValueAt(selectedRow, 3);
 
-        AddMember addui = new AddMember(firstName, lastName, yearInBand);
+        AddMember addui = new AddMember(memberid, firstName, lastName, yearInBand, callingForm, homeController);
         addui.setVisible(true);
     }
+
 
 
 }
