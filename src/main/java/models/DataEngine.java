@@ -1,5 +1,7 @@
 package models;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -153,5 +155,30 @@ public class DataEngine {
         }
         return members;
     }
+    public boolean saveData(ArrayList<Member> members, String fileName){
+        try {
+            File data = new File(fileName);
+            Scanner input = new Scanner(data);
+            input.useDelimiter(",");
 
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+            for (Member member : members){
+                String dataToWrite = member.getMemberID() + "," + member.getFirstName() + "," + member.getLastName() + member.getYearInBand()
+                + "," + member.getRankAndFile() + "," + member.isSectionLeader() + "," + member.getUniformScore() + "," + member.getMusicScore()
+                + "," + member.getUniform();
+
+                // TODO: 10/31/23 edit string above so that instrumentalists vs bandfront can be saved,and add uniform/prop field
+                bw.write("\n" + dataToWrite);
+            }
+
+            bw.close();
+
+        }
+        catch (IOException ex){
+            System.out.println(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
 }

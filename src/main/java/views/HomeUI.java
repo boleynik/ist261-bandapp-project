@@ -1,6 +1,7 @@
 package views;
 
 import controllers.HomeController;
+import models.DataEngine;
 import models.Member;
 
 import javax.swing.*;
@@ -43,6 +44,11 @@ public class HomeUI extends JFrame{
                 editRecord();
 
             }
+        });
+        exitButton.addActionListener(e -> {
+            DataEngine de = new DataEngine();
+            de.saveData(homeController.members, "data/member.csv");
+            System.exit(0);
         });
 
 
