@@ -1,51 +1,51 @@
 Member,Member ID,First name,Last name,Year in band,Rank and File,Section Leader,Uniform score,Music score,Uniform,Instrument/Prop
-Instrumentalist,1,John,Doe,1,A1,false,100,100,1,1
-Instrumentalist,2,Jane,Smith,2,B1,true,100,100,2,2
-Instrumentalist,3,Michael,Johnson,3,C1,true,100,100,3,3
-Instrumentalist,4,Emily,Brown,4,D1,true,100,100,4,4
-Instrumentalist,5,David,Anderson,1,E1,false,100,100,5,5
-Instrumentalist,6,Sarah,Williams,2,F1,false,100,100,6,6
-Instrumentalist,7,Robert,Lee,3,G1,false,100,100,7,7
-Instrumentalist,8,Julia,Clark,4,H1,false,100,100,8,8
-Instrumentalist,9,William,Moore,1,A2,false,100,100,9,9
-Instrumentalist,10,Olivia,Hall,2,B2,false,100,100,10,10
-Instrumentalist,11,James,Allen,3,C2,false,100,100,11,11
-Instrumentalist,12,Emma,Martin,4,D2,false,100,100,12,12
-Instrumentalist,13,Christopher,Wright,1,E2,false,100,100,13,13
-Instrumentalist,14,Grace,King,2,F2,false,100,100,14,14
-Instrumentalist,15,Matthew,Turner,3,G2,false,100,100,15,15
-Instrumentalist,16,Sophia,Scott,4,H2,false,100,100,16,16
-Instrumentalist,17,Daniel,Hill,1,A3,false,100,100,17,17
-Instrumentalist,18,Chloe,Baker,2,B3,false,100,100,18,18
-Instrumentalist,19,Joseph,Lopez,3,C3,false,100,100,19,19
-Instrumentalist,20,Ava,White,4,D3,false,100,100,20,20
-Instrumentalist,21,Andrew,Harris,1,E3,false,100,100,21,21
-Instrumentalist,22,Isabella,Young,2,F3,false,100,100,22,22
-Instrumentalist,23,Joshua,Evans,3,G3,false,100,100,23,23
-Instrumentalist,24,Abigail,Miller,4,H3,false,100,100,24,24
-Instrumentalist,25,Nicholas,Wilson,1,A4,false,100,100,25,25
-Bandfront,26,Elizabeth,Thomas,2,B4,false,100,100,26,26
-Bandfront,27,John,Davis,3,C4,false,100,100,27,27
-Bandfront,28,Mia,Martin,4,D4,false,100,100,28,28
-Bandfront,29,Michael,Anderson,1,E4,false,100,100,29,29
-Bandfront,30,Olivia,Brown,2,F4,true,100,100,30,30
-Bandfront,31,William,Johnson,3,G4,true,100,100,31,31
-Bandfront,32,Sophia,Clark,4,H4,true,100,100,32,32
-Bandfront,33,Matthew,Hall,1,A5,false,100,100,33,33
-Bandfront,34,Emily,Williams,2,B5,false,100,100,34,34
-Bandfront,35,James,Smith,3,C5,false,100,100,35,35
-Bandfront,36,Grace,Lee,4,D5,false,100,100,36,36
-Bandfront,37,David,King,1,E5,false,100,100,37,37
-Bandfront,38,Chloe,Turner,2,F5,false,100,100,38,38
-Bandfront,39,Robert,Wright,3,G5,false,100,100,39,39
-Bandfront,40,Sarah,Harris,4,H5,true,100,100,40,40
-Bandfront,41,Joseph,Evans,1,A6,false,100,100,41,41
-Bandfront,42,Emma,Young,2,B6,false,100,100,42,42
-Bandfront,43,Christopher,Miller,3,C6,true,100,100,43,43
-Bandfront,44,Isabella,Lopez,4,D6,false,100,100,44,44
-Bandfront,45,Daniel,Scott,1,E6,false,100,100,45,45
-Bandfront,46,Angelica,Schuyler,2,F6,false,100,100,46,46
-Bandfront,47,Philip,Hamilton,3,G6,false,100,100,47,47
-Bandfront,48,Eliza,Hamilton,4,H6,false,100,100,48,48
-Bandfront,49,Marquis,Lafayette,1,A7,false,100,100,49,49
-Bandfront,50,Thomas,Jefferson,2,B7,false,100,100,50,50
+Instrumentalist, 1,John,Doe1,A1,false,100.0,100.0,0,1
+Instrumentalist, 2,Jane,Smith2,B1,true,100.0,100.0,0,2
+Instrumentalist, 3,Michael,Johnson3,C1,true,100.0,100.0,0,3
+Instrumentalist, 4,Emily,Brown4,D1,true,100.0,100.0,0,4
+Instrumentalist, 5,David,Anderson1,E1,false,100.0,100.0,0,5
+Instrumentalist, 6,Sarah,Williams2,F1,false,100.0,100.0,0,6
+Instrumentalist, 7,Robert,Lee3,G1,false,100.0,100.0,0,7
+Instrumentalist, 8,Julia,Clark4,H1,false,100.0,100.0,0,8
+Instrumentalist, 9,William,Moore1,A2,false,100.0,100.0,0,9
+Instrumentalist, 10,Olivia,Hall2,B2,false,100.0,100.0,0,10
+Instrumentalist, 11,James,Allen3,C2,false,100.0,100.0,0,11
+Instrumentalist, 12,Emma,Martin4,D2,false,100.0,100.0,0,12
+Instrumentalist, 13,Christopher,Wright1,E2,false,100.0,100.0,0,13
+Instrumentalist, 14,Grace,King2,F2,false,100.0,100.0,0,14
+Instrumentalist, 15,Matthew,Turner3,G2,false,100.0,100.0,0,15
+Instrumentalist, 16,Sophia,Scott4,H2,false,100.0,100.0,0,16
+Instrumentalist, 17,Daniel,Hill1,A3,false,100.0,100.0,0,17
+Instrumentalist, 18,Chloe,Baker2,B3,false,100.0,100.0,0,18
+Instrumentalist, 19,Joseph,Lopez3,C3,false,100.0,100.0,0,19
+Instrumentalist, 20,Ava,White4,D3,false,100.0,100.0,0,20
+Instrumentalist, 21,Andrew,Harris1,E3,false,100.0,100.0,0,21
+Instrumentalist, 22,Isabella,Young2,F3,false,100.0,100.0,0,22
+Instrumentalist, 23,Joshua,Evans3,G3,false,100.0,100.0,0,23
+Instrumentalist, 24,Abigail,Miller4,H3,false,100.0,100.0,0,24
+Instrumentalist, 25,Nicholas,Wilson1,A4,false,100.0,100.0,0,25
+Bandfront, 26,Elizabeth,Thomas2,B4,false,100.0,100.0,0,26
+Bandfront, 27,John,Davis3,C4,false,100.0,100.0,0,27
+Bandfront, 28,Mia,Martin4,D4,false,100.0,100.0,0,28
+Bandfront, 29,Michael,Anderson1,E4,false,100.0,100.0,0,29
+Bandfront, 30,Olivia,Brown2,F4,true,100.0,100.0,0,30
+Bandfront, 31,William,Johnson3,G4,true,100.0,100.0,0,31
+Bandfront, 32,Sophia,Clark4,H4,true,100.0,100.0,0,32
+Bandfront, 33,Matthew,Hall1,A5,false,100.0,100.0,0,33
+Bandfront, 34,Emily,Williams2,B5,false,100.0,100.0,0,34
+Bandfront, 35,James,Smith3,C5,false,100.0,100.0,0,35
+Bandfront, 36,Grace,Lee4,D5,false,100.0,100.0,0,36
+Bandfront, 37,David,King1,E5,false,100.0,100.0,0,37
+Bandfront, 38,Chloe,Turner2,F5,false,100.0,100.0,0,38
+Bandfront, 39,Robert,Wright3,G5,false,100.0,100.0,0,39
+Bandfront, 40,Sarah,Harris4,H5,true,100.0,100.0,0,40
+Bandfront, 41,Joseph,Evans1,A6,false,100.0,100.0,0,41
+Bandfront, 42,Emma,Young2,B6,false,100.0,100.0,0,42
+Bandfront, 43,Christopher,Miller3,C6,true,100.0,100.0,0,43
+Bandfront, 44,Isabella,Lopez4,D6,false,100.0,100.0,0,44
+Bandfront, 45,Daniel,Scott1,E6,false,100.0,100.0,0,45
+Bandfront, 46,Angelica,Schuyler2,F6,false,100.0,100.0,0,46
+Bandfront, 47,Philip,Hamilton3,G6,false,100.0,100.0,0,47
+Bandfront, 48,Eliza,Hamilton4,H6,false,100.0,100.0,0,48
+Bandfront, 49,Marquis,Lafayette1,A7,false,100.0,100.0,0,49
+Bandfront, 50,Thomas,Jefferson2,B7,false,100.0,100.0,0,50

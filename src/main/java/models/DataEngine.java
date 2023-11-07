@@ -112,9 +112,8 @@ public class DataEngine {
             //now start looping thru and loading the models
             while (input.hasNextLine()) {
 
-//                BandInstrument newInstrument = new BandInstrument();
                 String[] record = input.nextLine().split(",");
-//                BandInstrument.setMemberID(q);
+
                 if (Objects.equals(record[0], "Instrumentalist")) {
                     Instrumentalist newInstrumentalist = new Instrumentalist();
                     for (int x = 0; x < record.length - 1; x++) {
@@ -161,23 +160,27 @@ public class DataEngine {
             Scanner input = new Scanner(data);
             input.useDelimiter(",");
 
-
             BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+            bw.write("Member,Member ID,First name,Last name,Year in band,Rank and File,Section Leader,Uniform score,Music score,Uniform,Instrument/Prop");
             for (Member member : members){
                 if (member instanceof Instrumentalist){
                     String dataToWrite = "Instrumentalist, " + member.getMemberID() + "," + member.getFirstName() + "," +
                             member.getLastName() + member.getYearInBand()
                             + "," + member.getRankAndFile() + "," + member.isSectionLeader()
                             + "," + member.getUniformScore() + "," + member.getMusicScore()
-                            + "," + member.getUniform() + ", " + ((Instrumentalist) member).getInstrument();
+                            + "," + member.getUniform() + "," + ((Instrumentalist) member).getInstrument();
+                    input.close();
                     bw.write("\n" + dataToWrite);
-                } else {
+                } else if (member instanceof Bandfront) {
                     String dataToWrite = "Bandfront, " + member.getMemberID() + "," + member.getFirstName() + "," +
                             member.getLastName() + member.getYearInBand()
                             + "," + member.getRankAndFile() + "," + member.isSectionLeader()
                             + "," + member.getUniformScore() + "," + member.getMusicScore()
-                            + "," + member.getUniform() + ((Bandfront) member).getProp();
+                            + "," + member.getUniform() + "," + ((Bandfront) member).getProp();
+                    input.close();
                     bw.write("\n" + dataToWrite);
+                } else {
+
                 }
             }
 
