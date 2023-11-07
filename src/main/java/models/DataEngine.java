@@ -164,12 +164,21 @@ public class DataEngine {
 
             BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
             for (Member member : members){
-                String dataToWrite = member.getMemberID() + "," + member.getFirstName() + "," + member.getLastName() + member.getYearInBand()
-                + "," + member.getRankAndFile() + "," + member.isSectionLeader() + "," + member.getUniformScore() + "," + member.getMusicScore()
-                + "," + member.getUniform();
-
-                // TODO: 10/31/23 edit string above so that instrumentalists vs bandfront can be saved,and add uniform/prop field
-                bw.write("\n" + dataToWrite);
+                if (member instanceof Instrumentalist){
+                    String dataToWrite = "Instrumentalist, " + member.getMemberID() + "," + member.getFirstName() + "," +
+                            member.getLastName() + member.getYearInBand()
+                            + "," + member.getRankAndFile() + "," + member.isSectionLeader()
+                            + "," + member.getUniformScore() + "," + member.getMusicScore()
+                            + "," + member.getUniform() + ", " + ((Instrumentalist) member).getInstrument();
+                    bw.write("\n" + dataToWrite);
+                } else {
+                    String dataToWrite = "Bandfront, " + member.getMemberID() + "," + member.getFirstName() + "," +
+                            member.getLastName() + member.getYearInBand()
+                            + "," + member.getRankAndFile() + "," + member.isSectionLeader()
+                            + "," + member.getUniformScore() + "," + member.getMusicScore()
+                            + "," + member.getUniform() + ((Bandfront) member).getProp();
+                    bw.write("\n" + dataToWrite);
+                }
             }
 
             bw.close();

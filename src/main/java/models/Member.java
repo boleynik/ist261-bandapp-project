@@ -99,6 +99,7 @@ public class Member {
         this.uniform = uniform;
     }
 
+
     @Override
     public String toString() {
         return "models.Member{" +
