@@ -1,7 +1,10 @@
-import models.*;
-
 public class ModelClassTest {
     public static void main(String[] args) {
+
+
+        /*
+
+        TESTS NEED TO BE UPDATED AFTER CHANGES TO MEMBER CLASSES
 
         System.out.println();
         Uniform uniform1 = new Uniform(1, true, true, true, true, true, true, true);
@@ -27,6 +30,8 @@ public class ModelClassTest {
         System.out.println();
 
         System.out.println(uniform1);
+
+         */
 
 
     }

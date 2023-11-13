@@ -1,6 +1,8 @@
 package views;
 
 import controllers.HomeController;
+import models.Bandfront;
+import models.Instrumentalist;
 import models.Member;
 
 import javax.swing.*;
@@ -15,11 +17,17 @@ public class AddMember extends JFrame{
     private JButton saveButton;
     private JButton exitButton;
     private JButton deleteButton;
+    private JRadioButton instrumentalistRadioButton;
+    private JRadioButton bandfrontRadioButton;
+    private JRadioButton yesRadioButton;
+    private JRadioButton noRadioButton;
+    private JTextField scoreField;
     private HomeController homeController;
     private HomeUI callingF;
     private int memberID;
     private AddMember thisForm;
-
+    private ButtonGroup groupForBFI;
+    private ButtonGroup groupForSL;
 
 
     /*
@@ -35,7 +43,12 @@ public class AddMember extends JFrame{
         this.setSize(400, 250);
         setContentPane(panel1);
         setLocationRelativeTo(null);
-
+        groupForBFI = new ButtonGroup();
+        groupForBFI.add(instrumentalistRadioButton);
+        groupForBFI.add(bandfrontRadioButton);
+        groupForSL = new ButtonGroup();
+        groupForSL.add(yesRadioButton);
+        groupForSL.add(noRadioButton);
 
         exitButton.addActionListener(new ActionListener() {
             @Override
@@ -76,6 +89,9 @@ public class AddMember extends JFrame{
         callingF = callingFormIn;
         homeController = controllerIn;
         thisForm = this;
+        groupForSL = new ButtonGroup();
+        groupForSL.add(instrumentalistRadioButton);
+        groupForSL.add(bandfrontRadioButton);
 
         this.setSize(400, 250);
         setContentPane(panel1);
@@ -118,21 +134,64 @@ public class AddMember extends JFrame{
 
     public void editMember() {
         for (Member member : homeController.members){
+            
+
             if (member.getMemberID() == memberID) {
                 member.setFirstName(firstNameField.getText());
                 member.setLastName(lastNameField.getText());
                 member.setYearInBand(Integer.parseInt(getYIBField().getText()));
+                if (getYesRadioButton().isSelected()){
+                    member.setSectionLeader(true);
+                }else {
+                    member.setSectionLeader(false);
+                }
+                member.setScore(Double.parseDouble(scoreField.getText()));
+                member.setUniform(memberID);
+                if (member instanceof Instrumentalist){
+                    ((Instrumentalist) member).setInstrument(memberID);
+                } else if (member instanceof Bandfront) {
+                    ((Bandfront) member).setProp(memberID);
+                }
                 break;
             }
         }
     }
     public void addNewMember () {
-        Member newMember = new Member();
-        newMember.setFirstName(firstNameField.getText());
-        newMember.setLastName(lastNameField.getText());
-        newMember.setYearInBand(Integer.parseInt(getYIBField().getText()));
-        newMember.setMemberID(homeController.members.size() + 100);
-        homeController.members.add(newMember);
+
+        if (getInstrumentalistRadioButton().isSelected()){
+            Member newInstrumentalist = new Instrumentalist();
+            newInstrumentalist.setFirstName(firstNameField.getText());
+            newInstrumentalist.setLastName(lastNameField.getText());
+            newInstrumentalist.setYearInBand(Integer.parseInt(getYIBField().getText()));
+            newInstrumentalist.setMemberID(homeController.members.size() + 100);
+            if (getYesRadioButton().isSelected()){
+                newInstrumentalist.setSectionLeader(true);
+            }else {
+                newInstrumentalist.setSectionLeader(false);
+            }
+            newInstrumentalist.setScore(Double.parseDouble(scoreField.getText()));
+            newInstrumentalist.setUniform(memberID);
+            ((Instrumentalist) newInstrumentalist).setInstrument(memberID);
+
+            homeController.members.add(newInstrumentalist);
+        } else if (getBandfrontRadioButton().isSelected()) {
+            Member newBandfront = new Bandfront();
+            newBandfront.setFirstName(firstNameField.getText());
+            newBandfront.setLastName(lastNameField.getText());
+            newBandfront.setYearInBand(Integer.parseInt(getYIBField().getText()));
+            newBandfront.setMemberID(homeController.members.size() + 100);
+            if (getYesRadioButton().isSelected()){
+                newBandfront.setSectionLeader(true);
+            }else {
+                newBandfront.setSectionLeader(false);
+            }
+            newBandfront.setScore(Double.parseDouble(scoreField.getText()));
+            newBandfront.setUniform(memberID);
+            ((Bandfront) newBandfront).setProp(memberID);
+
+            homeController.members.add(newBandfront);
+        }
+
     }
     public void deleteMember () {
         for (int i = 0; i < homeController.members.size(); i++) {
@@ -205,4 +264,44 @@ public class AddMember extends JFrame{
             this.deleteButton = deleteButton;
         }
 
+    public JRadioButton getInstrumentalistRadioButton() {
+        return instrumentalistRadioButton;
     }
+
+    public void setInstrumentalistRadioButton(JRadioButton instrumentalistRadioButton) {
+        this.instrumentalistRadioButton = instrumentalistRadioButton;
+    }
+
+    public JRadioButton getBandfrontRadioButton() {
+        return bandfrontRadioButton;
+    }
+
+    public void setBandfrontRadioButton(JRadioButton bandfrontRadioButton) {
+        this.bandfrontRadioButton = bandfrontRadioButton;
+    }
+
+    public JRadioButton getYesRadioButton() {
+        return yesRadioButton;
+    }
+
+    public void setYesRadioButton(JRadioButton yesRadioButton) {
+        this.yesRadioButton = yesRadioButton;
+    }
+
+    public JRadioButton getNoRadioButton() {
+        return noRadioButton;
+    }
+
+    public void setNoRadioButton(JRadioButton noRadioButton) {
+        this.noRadioButton = noRadioButton;
+    }
+
+    public JTextField getScoreField() {
+        return scoreField;
+    }
+
+    public void setScoreField(JTextField scoreField) {
+        this.scoreField = scoreField;
+    }
+}
+

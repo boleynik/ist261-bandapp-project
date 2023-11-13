@@ -12,7 +12,6 @@ public class Main {
 
         ArrayList<Member> members = de.loadMemberData("data/member.csv");
 
-
         HomeController homeController = new HomeController(members);
 
 

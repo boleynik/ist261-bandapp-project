@@ -121,12 +121,10 @@ public class DataEngine {
                         newInstrumentalist.setFirstName(record[2]);
                         newInstrumentalist.setLastName(record[3]);
                         newInstrumentalist.setYearInBand(Integer.parseInt(record[4]));
-                        newInstrumentalist.setRankAndFile(record[5]);
-                        newInstrumentalist.setSectionLeader(Boolean.parseBoolean(record[6]));
-                        newInstrumentalist.setUniformScore(Double.parseDouble(record[7]));
-                        newInstrumentalist.setMusicScore(Double.parseDouble(record[8]));
-                        newInstrumentalist.setUniform(Integer.parseInt(record[9]));
-                        newInstrumentalist.setInstrument(Integer.parseInt(record[10]));
+                        newInstrumentalist.setSectionLeader(Boolean.parseBoolean(record[5]));
+                        newInstrumentalist.setScore(Double.parseDouble(record[6]));
+                        newInstrumentalist.setUniform(Integer.parseInt(record[7]));
+                        newInstrumentalist.setInstrument(Integer.parseInt(record[8]));
                     }
                     members.add(newInstrumentalist);
                 } else {
@@ -136,12 +134,10 @@ public class DataEngine {
                         newBandfront.setFirstName(record[2]);
                         newBandfront.setLastName(record[3]);
                         newBandfront.setYearInBand(Integer.parseInt(record[4]));
-                        newBandfront.setRankAndFile(record[5]);
-                        newBandfront.setSectionLeader(Boolean.parseBoolean(record[6]));
-                        newBandfront.setUniformScore(Double.parseDouble(record[7]));
-                        newBandfront.setMusicScore(Double.parseDouble(record[8]));
-                        newBandfront.setUniform(Integer.parseInt(record[9]));
-                        newBandfront.setProp(Integer.parseInt(record[10]));
+                        newBandfront.setSectionLeader(Boolean.parseBoolean(record[5]));
+                        newBandfront.setScore(Double.parseDouble(record[6]));
+                        newBandfront.setUniform(Integer.parseInt(record[7]));
+                        newBandfront.setProp(Integer.parseInt(record[8]));
 
                     }
                     members.add(newBandfront);
@@ -161,21 +157,21 @@ public class DataEngine {
             input.useDelimiter(",");
 
             BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
-            bw.write("Member,Member ID,First name,Last name,Year in band,Rank and File,Section Leader,Uniform score,Music score,Uniform,Instrument/Prop");
+            bw.write("Member,Member ID,First name,Last name,Year in band,Section Leader,Score,Uniform,Instrument/Prop");
             for (Member member : members){
                 if (member instanceof Instrumentalist){
-                    String dataToWrite = "Instrumentalist, " + member.getMemberID() + "," + member.getFirstName() + "," +
-                            member.getLastName() + member.getYearInBand()
-                            + "," + member.getRankAndFile() + "," + member.isSectionLeader()
-                            + "," + member.getUniformScore() + "," + member.getMusicScore()
-                            + "," + member.getUniform() + "," + ((Instrumentalist) member).getInstrument();
+                    String dataToWrite = "Instrumentalist," + member.getMemberID() + "," + member.getFirstName() + "," +
+                            member.getLastName() + "," + member.getYearInBand()
+                            + "," + member.isSectionLeader()
+                            + "," + member.getScore() + "," + member.getUniform()
+                            + "," + ((Instrumentalist) member).getInstrument();
                     input.close();
                     bw.write("\n" + dataToWrite);
                 } else if (member instanceof Bandfront) {
-                    String dataToWrite = "Bandfront, " + member.getMemberID() + "," + member.getFirstName() + "," +
-                            member.getLastName() + member.getYearInBand()
-                            + "," + member.getRankAndFile() + "," + member.isSectionLeader()
-                            + "," + member.getUniformScore() + "," + member.getMusicScore()
+                    String dataToWrite = "Bandfront," + member.getMemberID() + "," + member.getFirstName() + "," +
+                            member.getLastName() + "," + member.getYearInBand()
+                            + "," + member.isSectionLeader()
+                            + "," + member.getScore()
                             + "," + member.getUniform() + "," + ((Bandfront) member).getProp();
                     input.close();
                     bw.write("\n" + dataToWrite);
@@ -186,6 +182,73 @@ public class DataEngine {
 
             bw.close();
 
+        }
+        catch (IOException ex){
+            System.out.println(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+
+
+    //NOT CURRENTLY BEING USED BECAUSE I HAVEN'T ALLOWED USERS TO MANIPULATE/ACCESS THIS DATA YET
+    public boolean saveInstrumentData(ArrayList <BandInstrument> instruments,String fileName){
+        try {
+            File data = new File(fileName);
+            Scanner input = new Scanner(data);
+            input.useDelimiter(",");
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+            bw.write("Type,Manufacturer,Serial Number,MemberID");
+            for (BandInstrument instrument : instruments) {
+                String dataToWrite = instrument.getType() + "," + instrument.getInstrumentManufacturer() + "," +
+                        instrument.getInstrumentSerialNumber() + "," + instrument.getMemberID();
+                bw.write("\n" + dataToWrite);
+            }
+        }
+        catch (IOException ex){
+            System.out.println(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+    //NOT CURRENTLY BEING USED BECAUSE I HAVEN'T ALLOWED USERS TO MANIPULATE/ACCESS THIS DATA YET
+    public boolean savePropData(ArrayList<Prop> props, String fileName){
+        try {
+            File data = new File(fileName);
+            Scanner input = new Scanner(data);
+            input.useDelimiter(",");
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+            bw.write("Type,ID,MemberID");
+            for (Prop prop : props) {
+                String dataToWrite = prop.getPropType() + "," + prop.getPropID() + "," +
+                        prop.getMemberID();
+                bw.write("\n" + dataToWrite);
+            }
+        }
+        catch (IOException ex){
+            System.out.println(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+    //NOT CURRENTLY BEING USED BECAUSE I HAVEN'T ALLOWED USERS TO MANIPULATE/ACCESS THIS DATA YET
+    public boolean saveUniformData(ArrayList<Uniform> uniforms, String fileName){
+        try {
+            File data = new File(fileName);
+            Scanner input = new Scanner(data);
+            input.useDelimiter(",");
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+            bw.write("MemberID,Hat,Jacket,Gloves,Pants,Spats,Shoes,Grooming");
+            for (Uniform uniform : uniforms) {
+                String dataToWrite = uniform.getMemberID() + "," + uniform.isHatdoesPass() + "," +
+                        uniform.isJacketdoesPass() + "," + uniform.isGlovesdoesPass() + "," +
+                        uniform.isPantsdoesPass() + "," + uniform.isSpatsdoesPass() + "," +
+                        uniform.isShoesdoesPass() + "," + uniform.isGroomingdoesPass();
+                        bw.write("\n" + dataToWrite);
+            }
         }
         catch (IOException ex){
             System.out.println(ex.getMessage());

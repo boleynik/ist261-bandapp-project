@@ -3,9 +3,9 @@ package models;
 public class Bandfront extends Member {
     private int prop;
 
-    public Bandfront(int studentID, String firstName, String lastName, int yearInBand, String rankAndFile,
-                     boolean isSectionLeader, int uniform, double uniformScore, double musicScore, int prop) {
-        super(studentID, firstName, lastName, yearInBand, rankAndFile, isSectionLeader, uniform, uniformScore, musicScore);
+    public Bandfront(int studentID, String firstName, String lastName, int yearInBand,
+                     boolean isSectionLeader, int uniform, double score, int prop) {
+        super(studentID, firstName, lastName, yearInBand, isSectionLeader, uniform, score);
         this.prop = prop;
     }
     public Bandfront(){
@@ -27,11 +27,9 @@ public class Bandfront extends Member {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", yearInBand=" + yearInBand +
-                ", rankAndFile='" + rankAndFile + '\'' +
                 ", isSectionLeader=" + isSectionLeader +
                 ", uniform=" + uniform +
-                ", uniformScore=" + uniformScore +
-                ", musicScore=" + musicScore +
+                ", score=" + score +
                 ", prop=" + prop +
                 '}';
     }
