@@ -21,7 +21,7 @@ public class HomeController {
         homeUI.setTitle("Marching Band App");
         homeUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // close behavior
         homeUI.setLocationRelativeTo(null);
-        homeUI.setSize(500, 500);
+        homeUI.setSize(600, 600);
         homeUI.setVisible(true);
 
         homeUI.getAddButton().addActionListener(e -> homeUI.editRecord());

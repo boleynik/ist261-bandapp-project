@@ -26,6 +26,7 @@ public class HomeUI extends JFrame{
         this.homeController = controller;
 
         loadTable(controller.members);
+        callingForm.setLocationRelativeTo(null);
 
         this.setContentPane(homePanel);
 
@@ -53,19 +54,14 @@ public class HomeUI extends JFrame{
 
 
     }
-
-
-
-
-
     public void loadTable(ArrayList<Member> members)
     {
-        String headers[] = {"ID", "First Name", "Last Name", "Year in Band"};
+        String headers[] = {"ID", "First Name", "Last Name", "Year in Band", "Score"};
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(headers);
         for(Member member : members)
         {
-            model.addRow(new Object[] {member.getMemberID(), member.getFirstName(), member.getLastName(), member.getYearInBand()});
+            model.addRow(new Object[] {member.getMemberID(), member.getFirstName(), member.getLastName(), member.getYearInBand(), member.getScore()});
         }
         homeTable.setModel(model);
     }
@@ -107,3 +103,4 @@ public class HomeUI extends JFrame{
 
 
 }
+

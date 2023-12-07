@@ -40,7 +40,7 @@ public class AddMember extends JFrame{
         homeController = homeControllerpPassedIn;
         callingF = callingForm;
         thisForm = this;
-        this.setSize(400, 250);
+        this.setSize(800, 250);
         setContentPane(panel1);
         setLocationRelativeTo(null);
         groupForBFI = new ButtonGroup();
@@ -93,7 +93,7 @@ public class AddMember extends JFrame{
         groupForSL.add(instrumentalistRadioButton);
         groupForSL.add(bandfrontRadioButton);
 
-        this.setSize(400, 250);
+        this.setSize(800, 250);
         setContentPane(panel1);
         setLocationRelativeTo(null);
 

@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MemberTest {
     Uniform uniform = new Uniform(1, true, true,true,
             true,true,true,true);
-    Member mem1 = new Member(001, "Sam", "Band", 4, "A4",
-            false, 1, 100, 100);
+    Member mem1 = new Member(001, "Sam", "Band", 4,
+            false, 1, 100);
     @org.junit.jupiter.api.Test
     void getStudentID() {
 
@@ -52,16 +52,6 @@ class MemberTest {
         assertEquals(3, mem1.getYearInBand());
     }
 
-    @org.junit.jupiter.api.Test
-    void getRankAndFile() {
-        assertEquals("A4", mem1.getRankAndFile());
-    }
-
-    @org.junit.jupiter.api.Test
-    void setRankAndFile() {
-        mem1.setRankAndFile("B3");
-        assertEquals("B3", mem1.getRankAndFile());
-    }
 
     @org.junit.jupiter.api.Test
     void isSectionLeader() {
@@ -75,38 +65,8 @@ class MemberTest {
     }
 
     @org.junit.jupiter.api.Test
-    void getUniformScore() {
-        assertEquals(100, mem1.getUniformScore());
-    }
-
-    @org.junit.jupiter.api.Test
-    void setUniformScore() {
-        mem1.setUniformScore(90);
-        assertEquals(90, mem1.getUniformScore());
-    }
-
-    @org.junit.jupiter.api.Test
-    void getMusicScore() {
-        assertEquals(100, mem1.getMusicScore());
-    }
-
-    @org.junit.jupiter.api.Test
-    void setMusicScore() {
-        mem1.setMusicScore(80);
-        assertEquals(80, mem1.getMusicScore());
-    }
-
-    @org.junit.jupiter.api.Test
     void getUniform() {
         assertEquals(uniform, mem1.getUniform());
 
     }
-
-//    @org.junit.jupiter.api.Test
-//    void setUniform() {
-//        Uniform testUniform = new Uniform(1, false, false, false,
-//                false,false,false,false);
-//        mem1.setUniform(testUniform);
-//        assertEquals(testUniform, mem1.getUniform());
-//    }
 }
